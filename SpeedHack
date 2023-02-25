@@ -1,0 +1,6 @@
+getgenv().speedMultiplier = 3 --speed
+local globals = getrenv()._G.globals
+game:GetService("RunService").RenderStepped:Connect(function()
+    globals.fpv_sol_multipliers.movement = getgenv().speedMultiplier
+end)
+ 
